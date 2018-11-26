@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "E:/Xilinx/New folder/new/decoder/decoter.xst" -ofn "E:/Xilinx/New folder/new/decoder/decoter.syr" 

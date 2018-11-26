@@ -1,0 +1,3 @@
+vhdtdtfi -lib work {E:/Xilinx/New folder/new/decoder/decoter.v} -lang verilog -prj decoder -o tb.spl -module tb -template E:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 tb.spl {E:/Xilinx/New folder/new/decoder/tb.sym} 
+vhdtdtfi -lang verilog -prj decoder -o "E:/Xilinx/New folder/new/decoder/tb.tfi" -lib work "E:/Xilinx/New folder/new/decoder//decoter.v" -module tb -template E:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
