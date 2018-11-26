@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="PPI.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Group.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Group.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="Group.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="PPI.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="PPI.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="PPI.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="PPI_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="PPI_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="PPI_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Port.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Port.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="Port.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="PortA.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="PortA.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="PortA.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Port_Full_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Port_half.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Port_half.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="Port_half.xst"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1542988951" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1542988951">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1543036499" xil_pn:in_ck="4663744324" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1543036499">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="test.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1542988951" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-8612130015916220800" xil_pn:start_ts="1542988951">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+    </transform>
+    <transform xil_pn:end_ts="1542988951" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="6867419988833527966" xil_pn:start_ts="1542988951">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+    </transform>
+    <transform xil_pn:end_ts="1542988951" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="1736934632283253990" xil_pn:start_ts="1542988951">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+    </transform>
+    <transform xil_pn:end_ts="1542988951" xil_pn:in_ck="4663744324" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1542988951">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="test.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1542988957" xil_pn:in_ck="4663744324" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="156318894213727503" xil_pn:start_ts="1542988951">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="PPI_beh.prj"/>
+      <outfile xil_pn:name="PPI_isim_beh.exe"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1542988958" xil_pn:in_ck="-8797588866881902184" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="4603510461840191314" xil_pn:start_ts="1542988957">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="PPI_isim_beh.wdb"/>
+      <outfile xil_pn:name="isim.cmd"/>
+    </transform>
+  </transforms>
+
+</generated_project>
