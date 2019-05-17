@@ -1,0 +1,403 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.34 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.35 secs
+ 
+--> Reading design: PCI_ARBITER.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "PCI_ARBITER.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "PCI_ARBITER"
+Output Format                      : NGC
+Target Device                      : xc3s50-5-pq208
+
+---- Source Options
+Top Module Name                    : PCI_ARBITER
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "PCI.v" in library work
+Module <PCI_ARBITER> compiled
+No errors in compilation
+Analysis of file <"PCI_ARBITER.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <PCI_ARBITER> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <PCI_ARBITER>.
+Module <PCI_ARBITER> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <PCI_ARBITER>.
+    Related source file is "PCI.v".
+    Found finite state machine <FSM_0> for signal <GNT_REG>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 37                                             |
+    | Inputs             | 8                                              |
+    | Outputs            | 7                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Clock enable       | GNT_REG$not0000           (positive)           |
+    | Power Up State     | 111                                            |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 2-bit up counter for signal <counter_frame>.
+    Found 1-bit register for signal <counter_irdy>.
+    Found 1-bit register for signal <enable_frame>.
+    Found 1-bit register for signal <enable_irdy>.
+    Found 3-bit register for signal <GNT_REG2>.
+    Found 2-bit adder for signal <old_counter_frame_1$add0000> created at line 36.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred   6 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+Unit <PCI_ARBITER> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 1-bit adder                                           : 1
+ 2-bit adder                                           : 1
+# Counters                                             : 1
+ 2-bit up counter                                      : 1
+# Registers                                            : 4
+ 1-bit register                                        : 3
+ 3-bit register                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <GNT_REG/FSM> on signal <GNT_REG[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 111   | 00
+ 110   | 01
+ 101   | 11
+ 011   | 10
+-------------------
+WARNING:Xst:1293 - FF/Latch <counter_irdy> has a constant value of 0 in block <PCI_ARBITER>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Adders/Subtractors                                   : 2
+ 1-bit adder                                           : 1
+ 2-bit adder                                           : 1
+# Counters                                             : 1
+ 2-bit up counter                                      : 1
+# Registers                                            : 6
+ Flip-Flops                                            : 6
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <counter_irdy> has a constant value of 0 in block <PCI_ARBITER>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <PCI_ARBITER> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block PCI_ARBITER, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 9
+ Flip-Flops                                            : 9
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : PCI_ARBITER.ngr
+Top Level Output File Name         : PCI_ARBITER
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 10
+
+Cell Usage :
+# BELS                             : 19
+#      INV                         : 3
+#      LUT2                        : 3
+#      LUT2_L                      : 1
+#      LUT3_L                      : 1
+#      LUT4                        : 9
+#      LUT4_D                      : 1
+#      VCC                         : 1
+# FlipFlops/Latches                : 9
+#      FD                          : 1
+#      FD_1                        : 1
+#      FDE                         : 2
+#      FDRE                        : 3
+#      FDS_1                       : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 9
+#      IBUF                        : 6
+#      OBUF                        : 3
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s50pq208-5 
+
+ Number of Slices:                        8  out of    768     1%  
+ Number of Slice Flip Flops:              9  out of   1536     0%  
+ Number of 4 input LUTs:                 18  out of   1536     1%  
+ Number of IOs:                          10
+ Number of bonded IOBs:                  10  out of    124     8%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 9     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 5.629ns (Maximum Frequency: 177.658MHz)
+   Minimum input arrival time before clock: 6.245ns
+   Maximum output required time after clock: 6.216ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.629ns (frequency: 177.658MHz)
+  Total number of paths / destination ports: 38 / 15
+-------------------------------------------------------------------------
+Delay:               2.814ns (Levels of Logic = 1)
+  Source:            GNT_REG_FSM_FFd2 (FF)
+  Destination:       GNT_REG2_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk falling
+
+  Data Path: GNT_REG_FSM_FFd2 to GNT_REG2_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              6   0.626   0.853  GNT_REG_FSM_FFd2 (GNT_REG_FSM_FFd2)
+     INV:I->O              1   0.479   0.681  GNT_REG_or000211_INV_0 (GNT_REG_or00021)
+     FDS_1:D                   0.176          GNT_REG2_0
+    ----------------------------------------
+    Total                      2.814ns (1.281ns logic, 1.533ns route)
+                                       (45.5% logic, 54.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 41 / 10
+-------------------------------------------------------------------------
+Offset:              6.245ns (Levels of Logic = 4)
+  Source:            IRDY (PAD)
+  Destination:       GNT_REG_FSM_FFd1 (FF)
+  Destination Clock: clk rising
+
+  Data Path: IRDY to GNT_REG_FSM_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   0.715   1.066  IRDY_IBUF (IRDY_IBUF)
+     LUT2:I0->O            5   0.479   0.953  GNT_REG_not0001211 (counter_frame_and0001)
+     LUT4_D:I1->O          2   0.479   0.804  GNT_REG_not000122 (N6)
+     LUT4:I2->O            2   0.479   0.745  GNT_REG_not0001 (GNT_REG_not0001)
+     FDE:CE                    0.524          GNT_REG_FSM_FFd1
+    ----------------------------------------
+    Total                      6.245ns (2.676ns logic, 3.569ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              6.216ns (Levels of Logic = 1)
+  Source:            GNT_REG2_0 (FF)
+  Destination:       GNT_A (PAD)
+  Source Clock:      clk falling
+
+  Data Path: GNT_REG2_0 to GNT_A
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS_1:C->Q            1   0.626   0.681  GNT_REG2_0 (GNT_REG2_0)
+     OBUF:I->O                 4.909          GNT_A_OBUF (GNT_A)
+    ----------------------------------------
+    Total                      6.216ns (5.535ns logic, 0.681ns route)
+                                       (89.0% logic, 11.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.33 secs
+ 
+--> 
+
+Total memory usage is 4534380 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

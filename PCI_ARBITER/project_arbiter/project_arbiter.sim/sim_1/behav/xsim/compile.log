@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/sandy/projects/co 2/pci/PCI_ARBITER/PCI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PCI_ARBITER
+INFO: [VRFC 10-311] analyzing module DEVICE
+INFO: [VRFC 10-311] analyzing module tb

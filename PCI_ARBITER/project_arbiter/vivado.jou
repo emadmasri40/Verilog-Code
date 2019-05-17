@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Dec 27 15:05:58 2018
+# Process ID: 1152
+# Current directory: E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8644 E:\sandy\projects\co 2\pci\PCI_ARBITER\project_arbiter\project_arbiter.xpr
+# Log file: E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/vivado.log
+# Journal file: E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/project_arbiter.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config {E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/ARBITER_6_TB_behav.wcfg}
+source tb.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+current_wave_config {Untitled 1}
+add_wave {{/tb/B/Memory}} 
+relaunch_sim
+current_wave_config {Untitled 1}
+add_wave {{/tb/B/Memory}} 
+relaunch_sim
+relaunch_sim
+close_sim

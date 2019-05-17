@@ -1,0 +1,14 @@
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+ RST= 0  FRAME= x  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= x  TRDY= x  DEVSEL= x  GNT= 1  No_Data= xxx   REQ= x 
+ RST= 0  FRAME= 1  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= 1  TRDY= 1  DEVSEL= z  GNT= 1  No_Data= xxx   REQ= 1 
+ RST= 1  FRAME= 1  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= 1  TRDY= 1  DEVSEL= z  GNT= 1  No_Data= xxx   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= z  TRDY= 1  DEVSEL= z  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= z  TRDY= 1  DEVSEL= z  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= 1  TRDY= 1  DEVSEL= z  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= 0001  AD= 00000000000000000000000000000001  IRDY= 1  TRDY= 1  DEVSEL= z  GNT= 0  No_Data= 011   REQ= 1 
+ RST= 1  FRAME= 0  CBE= 0001  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= 1  TRDY= x  DEVSEL= x  GNT= 0  No_Data= 011   REQ= 1 
+ RST= 1  FRAME= 0  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= 0  TRDY= 0  DEVSEL= 0  GNT= 1  No_Data= 011   REQ= 1 
+ RST= 1  FRAME= 0  CBE= 1111  AD= 10101010101010101010101010101010  IRDY= 0  TRDY= 0  DEVSEL= 0  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= z  TRDY= 0  DEVSEL= 0  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= z  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 

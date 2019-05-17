@@ -1,0 +1,717 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Dec 27 15:05:58 2018
+# Process ID: 1152
+# Current directory: E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8644 E:\sandy\projects\co 2\pci\PCI_ARBITER\project_arbiter\project_arbiter.xpr
+# Log file: E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/vivado.log
+# Journal file: E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/project_arbiter.xpr}
+INFO: [Project 1-313] Project file moved from 'C:/Users/Galal/Desktop/PPI/PCI_ARBITER/project_arbiter' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/sandy/XilinX2018/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:11 . Memory (MB): peak = 823.336 ; gain = 130.629
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/project_arbiter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/project_arbiter.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/sandy/projects/co 2/pci/PCI_ARBITER/PCI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PCI_ARBITER
+INFO: [VRFC 10-311] analyzing module DEVICE
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/project_arbiter.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/project_arbiter.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: E:/sandy/XilinX2018/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto a238405f414e42509fbb8b208b8e2c37 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DEVICE
+Compiling module xil_defaultlib.PCI_ARBITER
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/project_arbiter.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -view {{E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/ARBITER_6_TB_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config {E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/ARBITER_6_TB_behav.wcfg}
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ RST= 0  FRAME= x  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= x  TRDY= x  DEVSEL= x  GNT= 1  No_Data= xxx   REQ= x 
+ RST= 0  FRAME= 1  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= 1  TRDY= z  DEVSEL= z  GNT= 1  No_Data= xxx   REQ= 1 
+ RST= 1  FRAME= 1  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= 1  TRDY= z  DEVSEL= z  GNT= 1  No_Data= xxx   REQ= 0 
+ RST= 1  FRAME= z  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= z  TRDY= z  DEVSEL= z  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= z  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= z  TRDY= z  DEVSEL= z  GNT= 0  No_Data= 011   REQ= 0 
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 872.148 ; gain = 27.152
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/project_arbiter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/project_arbiter.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/sandy/projects/co 2/pci/PCI_ARBITER/PCI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PCI_ARBITER
+INFO: [VRFC 10-311] analyzing module DEVICE
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/project_arbiter.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/project_arbiter.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: E:/sandy/XilinX2018/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto a238405f414e42509fbb8b208b8e2c37 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DEVICE
+Compiling module xil_defaultlib.PCI_ARBITER
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+ RST= 0  FRAME= x  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= x  TRDY= x  DEVSEL= x  GNT= 1  No_Data= xxx   REQ= x 
+ RST= 0  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= z  TRDY= z  DEVSEL= z  GNT= 1  No_Data= xxx   REQ= 1 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= z  TRDY= z  DEVSEL= z  GNT= 1  No_Data= xxx   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= z  TRDY= z  DEVSEL= z  GNT= 1  No_Data= 011   REQ= 0 
+relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 876.566 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/project_arbiter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/project_arbiter.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/sandy/projects/co 2/pci/PCI_ARBITER/PCI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PCI_ARBITER
+INFO: [VRFC 10-311] analyzing module DEVICE
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/project_arbiter.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/project_arbiter.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: E:/sandy/XilinX2018/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto a238405f414e42509fbb8b208b8e2c37 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DEVICE
+Compiling module xil_defaultlib.PCI_ARBITER
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+ RST= 0  FRAME= x  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= x  TRDY= x  DEVSEL= x  GNT= 1  No_Data= xxx   REQ= x 
+ RST= 0  FRAME= 1  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= 1  TRDY= z  DEVSEL= z  GNT= 1  No_Data= xxx   REQ= 1 
+ RST= 1  FRAME= 1  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= 1  TRDY= z  DEVSEL= z  GNT= 1  No_Data= xxx   REQ= 0 
+ RST= 1  FRAME= 1  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= 1  TRDY= z  DEVSEL= z  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= 1  TRDY= z  DEVSEL= z  GNT= 0  No_Data= 011   REQ= 1 
+ RST= 1  FRAME= 0  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= 0  TRDY= z  DEVSEL= z  GNT= 1  No_Data= 011   REQ= 1 
+ RST= 1  FRAME= 0  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= 0  TRDY= z  DEVSEL= z  GNT= 1  No_Data= 011   REQ= 0 
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 879.086 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/project_arbiter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/project_arbiter.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/sandy/projects/co 2/pci/PCI_ARBITER/PCI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PCI_ARBITER
+INFO: [VRFC 10-311] analyzing module DEVICE
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/project_arbiter.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/project_arbiter.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: E:/sandy/XilinX2018/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto a238405f414e42509fbb8b208b8e2c37 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DEVICE
+Compiling module xil_defaultlib.PCI_ARBITER
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+ RST= 0  FRAME= x  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= x  TRDY= x  DEVSEL= x  GNT= 1  No_Data= xxx   REQ= x 
+ RST= 0  FRAME= 1  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= 1  TRDY= z  DEVSEL= z  GNT= 1  No_Data= xxx   REQ= 1 
+ RST= 1  FRAME= 1  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= 1  TRDY= z  DEVSEL= z  GNT= 1  No_Data= xxx   REQ= 0 
+ RST= 1  FRAME= z  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= z  TRDY= z  DEVSEL= z  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= z  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= z  TRDY= z  DEVSEL= z  GNT= 0  No_Data= 011   REQ= 0 
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 896.520 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/project_arbiter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/project_arbiter.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/sandy/projects/co 2/pci/PCI_ARBITER/PCI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PCI_ARBITER
+INFO: [VRFC 10-311] analyzing module DEVICE
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/project_arbiter.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/project_arbiter.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: E:/sandy/XilinX2018/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto a238405f414e42509fbb8b208b8e2c37 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DEVICE
+Compiling module xil_defaultlib.PCI_ARBITER
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+ RST= 0  FRAME= x  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= x  TRDY= x  DEVSEL= x  GNT= 1  No_Data= xxx   REQ= x 
+ RST= 0  FRAME= 1  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= 1  TRDY= z  DEVSEL= z  GNT= 1  No_Data= xxx   REQ= 1 
+ RST= 1  FRAME= 1  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= 1  TRDY= z  DEVSEL= z  GNT= 1  No_Data= xxx   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= z  TRDY= z  DEVSEL= z  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= z  TRDY= z  DEVSEL= z  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= 1  TRDY= z  DEVSEL= z  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= 0001  AD= 00000000000000000000000000000001  IRDY= 1  TRDY= z  DEVSEL= z  GNT= 0  No_Data= 011   REQ= 1 
+ RST= 1  FRAME= 0  CBE= 0001  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= 1  TRDY= x  DEVSEL= x  GNT= 0  No_Data= 011   REQ= 1 
+ RST= 1  FRAME= 0  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= 0  TRDY= 0  DEVSEL= 0  GNT= 1  No_Data= 011   REQ= 1 
+ RST= 1  FRAME= 0  CBE= 1111  AD= 10101010101010101010101010101010  IRDY= 0  TRDY= 0  DEVSEL= 0  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= z  TRDY= 0  DEVSEL= 0  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= z  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 896.520 ; gain = 0.000
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/tb/B/Memory}} 
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/project_arbiter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/project_arbiter.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/project_arbiter.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/project_arbiter.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: E:/sandy/XilinX2018/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto a238405f414e42509fbb8b208b8e2c37 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+ RST= 0  FRAME= x  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= x  TRDY= x  DEVSEL= x  GNT= 1  No_Data= xxx   REQ= x 
+ RST= 0  FRAME= 1  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= 1  TRDY= z  DEVSEL= z  GNT= 1  No_Data= xxx   REQ= 1 
+ RST= 1  FRAME= 1  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= 1  TRDY= z  DEVSEL= z  GNT= 1  No_Data= xxx   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= z  TRDY= z  DEVSEL= z  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= z  TRDY= z  DEVSEL= z  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= 1  TRDY= z  DEVSEL= z  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= 0001  AD= 00000000000000000000000000000001  IRDY= 1  TRDY= z  DEVSEL= z  GNT= 0  No_Data= 011   REQ= 1 
+ RST= 1  FRAME= 0  CBE= 0001  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= 1  TRDY= x  DEVSEL= x  GNT= 0  No_Data= 011   REQ= 1 
+ RST= 1  FRAME= 0  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= 0  TRDY= 0  DEVSEL= 0  GNT= 1  No_Data= 011   REQ= 1 
+ RST= 1  FRAME= 0  CBE= 1111  AD= 10101010101010101010101010101010  IRDY= 0  TRDY= 0  DEVSEL= 0  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= z  TRDY= 0  DEVSEL= 0  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= z  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 896.520 ; gain = 0.000
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/tb/B/Memory}} 
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/project_arbiter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/project_arbiter.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/sandy/projects/co 2/pci/PCI_ARBITER/PCI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PCI_ARBITER
+INFO: [VRFC 10-311] analyzing module DEVICE
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/project_arbiter.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/project_arbiter.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: E:/sandy/XilinX2018/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto a238405f414e42509fbb8b208b8e2c37 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DEVICE
+Compiling module xil_defaultlib.PCI_ARBITER
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+ RST= 0  FRAME= x  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= x  TRDY= x  DEVSEL= x  GNT= 1  No_Data= xxx   REQ= x 
+ RST= 0  FRAME= 1  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= 1  TRDY= 1  DEVSEL= z  GNT= 1  No_Data= xxx   REQ= 1 
+ RST= 1  FRAME= 1  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= 1  TRDY= 1  DEVSEL= z  GNT= 1  No_Data= xxx   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= z  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= z  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= 1  TRDY= 1  DEVSEL= z  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= 0001  AD= 00000000000000000000000000000001  IRDY= 1  TRDY= 1  DEVSEL= z  GNT= 0  No_Data= 011   REQ= 1 
+ RST= 1  FRAME= 0  CBE= 0001  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= 1  TRDY= x  DEVSEL= x  GNT= 0  No_Data= 011   REQ= 1 
+ RST= 1  FRAME= 0  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= 0  TRDY= 0  DEVSEL= 0  GNT= 1  No_Data= 011   REQ= 1 
+ RST= 1  FRAME= 0  CBE= 1111  AD= 10101010101010101010101010101010  IRDY= 0  TRDY= 0  DEVSEL= 0  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 0  DEVSEL= 0  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 0  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= 1  TRDY= 1  DEVSEL= 1  GNT= 0  No_Data= 011   REQ= 0 
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 897.527 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/project_arbiter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/project_arbiter.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/sandy/projects/co 2/pci/PCI_ARBITER/PCI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PCI_ARBITER
+INFO: [VRFC 10-311] analyzing module DEVICE
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/project_arbiter.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/sandy/projects/co 2/pci/PCI_ARBITER/project_arbiter/project_arbiter.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: E:/sandy/XilinX2018/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto a238405f414e42509fbb8b208b8e2c37 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DEVICE
+Compiling module xil_defaultlib.PCI_ARBITER
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+ RST= 0  FRAME= x  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= x  TRDY= x  DEVSEL= x  GNT= 1  No_Data= xxx   REQ= x 
+ RST= 0  FRAME= 1  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= 1  TRDY= 1  DEVSEL= z  GNT= 1  No_Data= xxx   REQ= 1 
+ RST= 1  FRAME= 1  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= 1  TRDY= 1  DEVSEL= z  GNT= 1  No_Data= xxx   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= z  TRDY= 1  DEVSEL= z  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= z  TRDY= 1  DEVSEL= z  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= 1  TRDY= 1  DEVSEL= z  GNT= 0  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 0  CBE= 0001  AD= 00000000000000000000000000000001  IRDY= 1  TRDY= 1  DEVSEL= z  GNT= 0  No_Data= 011   REQ= 1 
+ RST= 1  FRAME= 0  CBE= 0001  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= 1  TRDY= x  DEVSEL= x  GNT= 0  No_Data= 011   REQ= 1 
+ RST= 1  FRAME= 0  CBE= xxxx  AD= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IRDY= 0  TRDY= 0  DEVSEL= 0  GNT= 1  No_Data= 011   REQ= 1 
+ RST= 1  FRAME= 0  CBE= 1111  AD= 10101010101010101010101010101010  IRDY= 0  TRDY= 0  DEVSEL= 0  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= z  TRDY= 0  DEVSEL= 0  GNT= 1  No_Data= 011   REQ= 0 
+ RST= 1  FRAME= 1  CBE= zzzz  AD= zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  IRDY= z  TRDY= 1  DEVSEL= 1  GNT= 1  No_Data= 011   REQ= 0 
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 897.926 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 27 16:18:01 2018...

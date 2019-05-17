@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/Galal/Desktop/PPI/PCI_ARBITER/file_read_isim_beh.exe" -prj "C:/Users/Galal/Desktop/PPI/PCI_ARBITER/file_read_beh.prj" "work.file_read" "work.glbl" 
