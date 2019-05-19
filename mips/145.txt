@@ -1,0 +1,103 @@
+//Stage_1
+`timescale 1 ps / 100 fs
+module Stage1(instruction, address);
+
+input [31:0] address;
+output [31:0] instruction;
+reg [31:0]instrmem[1023:0];
+reg [31:0] temp;
+
+
+
+always @(address)
+begin
+ temp=instrmem[address/4];
+end
+
+initial
+begin
+$readmemb("instr.txt", instrmem);
+end
+
+endmodule
+
+
+module Stage1_PC();
+
+reg [31:0] addr;
+wire [31:0] instr;
+
+Stage1 instructionmemory(instr, addr);
+
+initial
+begin
+$monitor("Mem Address=%h instruction=%b",addr,instr);
+ addr=32'd0;
+#10000 
+ addr=32'd4;
+#10000 
+ addr=32'd8;
+#10000
+ addr=32'd12;
+#10000
+ addr=32'd16;
+#10000
+ addr=32'd20;
+#10000
+ addr=32'd24;
+#10000
+ addr=32'd28;
+#10000;
+
+end
+
+endmodule
+
+
+
+
+
+//Stage_4
+module dataMem (data, address, writedata, writeenable,MemRead,clk);
+
+input [31:0] address, writedata;
+input writeenable,MemRead, clk;
+output [31:0] data;
+reg [7:0] datamem[1023:0];
+reg [31:0] temp;
+
+
+
+always @(posedge clk)
+ if (writeenable)
+ begin
+  datamem[address]=writedata[31:24];
+  datamem[address+1]=writedata[23:16];
+  datamem[address+2]=writedata[15:8];
+  datamem[address+3]=writedata[7:0];
+ end
+
+always @(address or datamem[address] or datamem[address+1] or datamem[address+2] or datamem[address+3])
+begin
+ temp={datamem[address],datamem[address+1],datamem[address+2],datamem[address+3]};
+end
+
+// initial
+// begin
+// $readmemh("data.dat", datamem);
+// end
+
+endmodule
+
+
+
+//Stage_5 
+module WB_MUX (data,address,sel ,writeReg);
+input [31:0] data ;
+input [31:0] address ;
+input sel ; 
+output [31:0] writeReg ;
+
+assign writeReg = sel ? address : data ;
+
+endmodule 

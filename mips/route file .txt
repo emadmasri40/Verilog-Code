@@ -1,0 +1,14 @@
+use studying abroad\university;
+use Illuminate\Support\Facades\Input;
+ 
+Route::get ( '/', function () {
+    return view ( 'welcome' );
+} );
+
+Route::any('/search',function(){
+    $q = Input::get ( 'q' );
+    $user = university::where('university_name','LIKE','%'.$q.'%')->get();
+    if(count($user) > 0)
+        return view('university overview')->withDetails($user)->withQuery ( $q );
+    else return view ('sorry')->withMessage('No Details found. Try to search again !');
+});

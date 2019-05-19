@@ -1,0 +1,57 @@
+module AluStage (
+                 output reg [31:0] Pc_out, 
+                 output reg zeroFlag,
+                 output reg [31:0] AluOut, 
+                 output reg [31:0] O_data2,
+                 output reg [4:0] O_EX_MEMRegisterRd, 
+                 input [4:0] EX_MEMRegisterRd, 
+                 input [4:0] MEM_WBRegisterRd,
+                 input [31:0] data1, 
+                 input [31:0] data2, 
+                 input [31:0] sign, 
+                 input [31:0] Pc,
+                 input [31:0] WriteBack,
+                 input [2:0] ALUop,
+                 input[5:0] funct,
+                 input [4:0] shamt,
+                 input [4:0] Rd,
+                 input [4:0] Rt,
+                 input RegWrite_EX,
+                 input RegWrite_MEM,
+                 input RegDst,
+                 input ALUSrc,
+                 input Branch,
+                 input Rs
+                 );
+
+wire [2:0] ALUcontrol;
+wire [31:0] Alu;
+reg [1:0] forwardA,forwardB;
+reg [31:0] Out_forwardA, Out_forwardB;
+assign Alu = (ALUSrc)? sign : Out_forwardB; 
+always @ (Branch, funct, ALUop, Pc, sign, data1, data2,Rd,Rt,RegDst)
+begin
+    O_EX_MEMRegisterRd<=EX_MEMRegisterRd;
+    O_data2 <= data2;
+    if(RegDst)
+        O_EX_MEMRegisterRd <= Rd;
+    else
+        O_EX_MEMRegisterRd <= Rt;  
+    
+    case (forwardA)
+    0: Out_forwardA <= data1;
+    1: Out_forwardA <= WriteBack;
+    2: Out_forwardA <= ALUop;
+    endcase   
+     case (forwardB)
+       0: Out_forwardB <= data2;
+       1: Out_forwardB <= WriteBack;
+       2: Out_forwardB <= ALUop;
+       endcase         
+end
+ALUControl(ALUcontrol, ALUop, funct);
+ALU(zeroFlag, AluOut, shamt, data1, Alu, ALUcontrol);
+branch (Pc_out, zeroFlag, Pc, sign, Branch);
+Forwarding ( forwardA,forwardB, RegWrite_EX, RegWrite_MEM, Rs, Rt, MEM_WBRegisterRd,EX_MEMRegisterRd); 
+
+endmodule          

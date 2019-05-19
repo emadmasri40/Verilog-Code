@@ -1,0 +1,32 @@
+<body>
+<div class="container">
+	<form action="/search" method="POST" role="search">
+            {{ csrf_field() }}
+    		<div class="input-group">
+        	    <input type="text" class="form-control" name="q"
+            	        placeholder="write the university name">
+	    	    <span class="input-group-btn">
+            	         <button type="submit" class="btn btn-default">
+                            <span class="glyphicon glyphicon-search"></span>
+                         </button>
+                    </span>
+                </div>
+        </form>
+
+        @if(isset($details))
+	 <div class="container">
+        	<p> <h3> {{ $query }} </h3> </p>
+    		<h2> OverView </h2>
+    
+            @foreach($details as $user)
+                {{$user->overview}}
+            @endforeach
+        </div>
+         @else if(isset($Message))
+ 	    <b> {{$Message}}  </b>
+         @endif
+</div>
+    
+</body>
+
+
